@@ -1,0 +1,6 @@
+framework module Pods_Gallery_Guru {
+  umbrella header "Pods-Gallery Guru-umbrella.h"
+
+  export *
+  module * { export * }
+}
