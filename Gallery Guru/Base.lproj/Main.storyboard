@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -229,12 +230,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="skn-ks-wqR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMx-X7-pbb">
+                                <rect key="frame" x="0.0" y="518" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVM-ka-IRN">
-                                <rect key="frame" x="0.0" y="44" width="375" height="1060"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1054"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QgA-0s-x32">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1035.5"/>
@@ -593,7 +594,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="QgA-0s-x32" firstAttribute="centerX" secondItem="ZVM-ka-IRN" secondAttribute="centerX" id="3jd-jg-a72"/>
-                                    <constraint firstAttribute="bottom" secondItem="QgA-0s-x32" secondAttribute="bottom" id="4fN-9a-AzJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="QgA-0s-x32" secondAttribute="bottom" constant="18.5" id="4fN-9a-AzJ"/>
                                     <constraint firstAttribute="trailing" secondItem="QgA-0s-x32" secondAttribute="trailing" id="Ode-04-5bo"/>
                                     <constraint firstItem="QgA-0s-x32" firstAttribute="top" secondItem="ZVM-ka-IRN" secondAttribute="top" id="TIm-gT-sN5"/>
                                     <constraint firstItem="QgA-0s-x32" firstAttribute="leading" secondItem="ZVM-ka-IRN" secondAttribute="leading" id="rce-zu-nqp"/>
@@ -603,14 +604,23 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZVM-ka-IRN" firstAttribute="leading" secondItem="Wpg-mQ-6U3" secondAttribute="leading" id="7Gn-1U-Ed9"/>
-                            <constraint firstItem="skn-ks-wqR" firstAttribute="top" secondItem="Wpg-mQ-6U3" secondAttribute="top" id="Bqc-ip-FKu"/>
-                            <constraint firstAttribute="trailing" secondItem="skn-ks-wqR" secondAttribute="trailing" id="GiJ-zW-Ylm"/>
-                            <constraint firstItem="skn-ks-wqR" firstAttribute="leading" secondItem="Wpg-mQ-6U3" secondAttribute="leading" id="Pj5-Rj-HIN"/>
+                            <constraint firstItem="ZVM-ka-IRN" firstAttribute="top" secondItem="Wpg-mQ-6U3" secondAttribute="top" constant="64" id="Wzm-2D-wl2"/>
                             <constraint firstAttribute="trailing" secondItem="ZVM-ka-IRN" secondAttribute="trailing" id="YJM-Ua-rhy"/>
-                            <constraint firstItem="ZVM-ka-IRN" firstAttribute="top" secondItem="ePg-56-9WL" secondAttribute="bottom" constant="24" id="lkC-mv-zdP"/>
-                            <constraint firstItem="bsZ-xH-w0r" firstAttribute="top" secondItem="ZVM-ka-IRN" secondAttribute="bottom" constant="-24" id="wv4-Ur-YU4"/>
+                            <constraint firstItem="bsZ-xH-w0r" firstAttribute="top" secondItem="ZVM-ka-IRN" secondAttribute="bottom" constant="-82" id="wv4-Ur-YU4"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sml-bG-2Td">
+                        <rightBarButtonItems>
+                            <barButtonItem image="share" id="dui-Nx-ZeM">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem image="like" id="BWF-2d-uhd">
+                                <color key="tintColor" red="0.55915945768356323" green="0.77452760934829712" blue="0.32624873518943787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1080"/>
                     <connections>
@@ -631,7 +641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sII-QQ-jRW" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2408.8000000000002" y="411.99400299850078"/>
+            <point key="canvasLocation" x="2957.5999999999999" y="247.37631184407797"/>
         </scene>
     </scenes>
     <resources>
@@ -641,9 +651,11 @@
         <image name="Slide 1" width="640" height="755"/>
         <image name="arrow_black" width="13" height="7"/>
         <image name="facebook" width="30" height="29"/>
+        <image name="like" width="28" height="24"/>
         <image name="link" width="30" height="29"/>
         <image name="maps_pin" width="30" height="29"/>
         <image name="phone" width="30" height="29"/>
+        <image name="share" width="23" height="22"/>
         <image name="tfss-93fa1303-35c7-4296-b0bd-d3929411ef9c-on2_up_logo" width="233" height="24"/>
     </resources>
 </document>

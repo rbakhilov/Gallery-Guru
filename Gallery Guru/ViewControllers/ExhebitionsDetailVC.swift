@@ -30,14 +30,23 @@ class ExhebitionsDetailVC: UIViewController {
         super.viewDidLoad()
         loadDetailExhebition()
         navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.navigationBar.backItem?.title = ""
     }
+    
+    lazy var dateFormat: DateFormatter = {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "dd.MM.yyyy"
+        return dateFormat
+    }()
     
     func loadDetailExhebition() {
         if let detailExhebition = detailExhebition {
             galleryNameLabel.text = detailExhebition.gallery?.name
             exhibitionLabel.text = detailExhebition.name
             exhibitionAuthorName.text = detailExhebition.authorName
-//            addressTextView.text = detailExhebition.gallery?.address
+            startDateLabel.text = detailExhebition.gallery?.schedule?[0]
+            endDateLabel.text = detailExhebition.gallery?.schedule?[1]
+            addressTextView.text = detailExhebition.gallery?.address
             galleryPhoneTextView.text = detailExhebition.gallery?.phone
             gallerySiteTextView.text = detailExhebition.gallery?.link
             galleryFacebookTextView.text = detailExhebition.gallery?.facebook
