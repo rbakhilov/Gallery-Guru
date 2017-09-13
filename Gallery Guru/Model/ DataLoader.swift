@@ -15,7 +15,7 @@ class DataLoader {
     
     func loadExhibitions(handler: @escaping LoadExhibitionHandler) {
         
-        Alamofire.request("https://gallery-guru-prod.herokuapp.com/exhibitions").responseJSON { response in
+        Alamofire.request(exhibitionsURL).responseJSON { response in
             
             if let exhibitionsRawArray = response.result.value as? [[String: Any]] {
                 let exhibitions: [Exhibition] = exhibitionsRawArray.map {
@@ -53,15 +53,15 @@ class DataLoader {
                     if let galleryRaw = galleryRaw {
                         gallery = Gallery(id: galleryRaw["objectId"] as! String,
                                           name: galleryRaw["name"] as! String,
-                                          createdDate: Date.from(dateString: galleryRaw["_created_at"] as? String),
-                                          updatedDate: Date.from(dateString: galleryRaw["_updated_at"] as? String),
+                                          createdDate: Date.from(dateString: galleryRaw["created_at"] as? String),
+                                          updatedDate: Date.from(dateString: galleryRaw["updated_at"] as? String),
                                           galleryDescription: galleryRaw["galleryDescription"] as? String,
                                           email: galleryRaw["email"] as? String,
                                           facebook: galleryRaw["facebook"] as? String,
                                           city: galleryRaw["city"] as? String,
                                           schedule: galleryRaw["schedule"] as? [String],
                                           address: galleryRaw["address"] as? String,
-                                          logo: galleryRaw["galleryLogo"] as? String,
+                                          logo: galleryRaw["galleryLogo"] as? [String: String],
                                           link: galleryRaw["link"] as? String,
                                           phone: galleryRaw["phone"] as? String,
                                           latitude: galleryRaw["latitude"] as? String,

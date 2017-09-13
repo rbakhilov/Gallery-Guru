@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "14FB3E9D93A73E7265A70E4E7EF0B267915A0DD6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9EC1A03F3FC0EC629F589C7B3C48B7888D429C69" : 9223372036854775807,
+    "14FB3E9D93A73E7265A70E4E7EF0B267915A0DD6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C5341DEC-F656-4D8B-A3F8-2E2AAE19202D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9EC1A03F3FC0EC629F589C7B3C48B7888D429C69" : "",
+    "14FB3E9D93A73E7265A70E4E7EF0B267915A0DD6" : "HomeWork9.1\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Gallery Guru",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Gallery Guru.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rbakhilov\/HomeWork9.1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "14FB3E9D93A73E7265A70E4E7EF0B267915A0DD6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rbakhilov\/HomeWork1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9EC1A03F3FC0EC629F589C7B3C48B7888D429C69"
+    }
+  ]
+}

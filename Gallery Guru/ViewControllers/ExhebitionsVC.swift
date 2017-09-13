@@ -14,8 +14,6 @@ class ExhebitionVC: UIViewController {
     
     var exhebitions: [Exhibition] = []
     var detailExhebition: Exhibition?
-    let exhebitionDetail = "ExhebitionDetail"
-    let exhibitionsCell = "ExhibitionsCell"
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
@@ -59,7 +57,7 @@ extension ExhebitionVC: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ExhibitionsCell") as! ExhibitionsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: exhibitionsCell) as! ExhibitionsCell
         let exhebition = exhebitions[indexPath.row]
         
         if !exhebition.works.isEmpty {
@@ -80,7 +78,7 @@ extension ExhebitionVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         detailExhebition = exhebitions[indexPath.row]
-        performSegue(withIdentifier: "ExhebitionDetail", sender: nil)
+        performSegue(withIdentifier: exhebitionDetail, sender: nil)
     }
     
 }

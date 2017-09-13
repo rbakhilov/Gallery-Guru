@@ -20,13 +20,13 @@ class Gallery {
     let city: String?
     let schedule: [String]?
     let address: String?
-    let logo: String?
+    let logo: [String: String]?
     let link: String?
     let phone: String?
     let latitude: String?
     let longitude: String?
     
-    init(id: String, name: String, createdDate: Date?, updatedDate: Date?, galleryDescription: String?, email: String?, facebook: String?, city: String?, schedule: [String]?, address: String?, logo: String?, link: String?, phone: String?, latitude: String?, longitude: String?) {
+    init(id: String, name: String, createdDate: Date?, updatedDate: Date?, galleryDescription: String?, email: String?, facebook: String?, city: String?, schedule: [String]?, address: String?, logo: [String: String]?, link: String?, phone: String?, latitude: String?, longitude: String?) {
         self.id = id
         self.name = name
         self.createdDate = createdDate
