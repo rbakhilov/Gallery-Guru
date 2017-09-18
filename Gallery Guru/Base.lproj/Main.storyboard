@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qV0-Ek-LpE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UnM-dq-dEG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -15,7 +15,7 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="Gallery_Guru" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="BYZ-38-t0r" customClass="LoginVC" customModule="Gallery_Guru" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -49,7 +49,7 @@
                                         <rect key="frame" x="0.0" y="0.5" width="376" height="442.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="443"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="442.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slide 1" translatesAutoresizingMaskIntoConstraints="NO" id="adY-Cr-rWf" userLabel="slide">
@@ -761,36 +761,36 @@
             <point key="canvasLocation" x="3872.8000000000002" y="57.121439280359823"/>
         </scene>
         <!--Splash ScreenVC-->
-        <scene sceneID="UuZ-DN-enh">
+        <scene sceneID="H2q-1z-cys">
             <objects>
-                <viewController id="qV0-Ek-LpE" customClass="SplashScreenVC" customModule="Gallery_Guru" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="UnM-dq-dEG" customClass="SplashScreenVC" customModule="Gallery_Guru" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rlY-Kx-zj7"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gl4-U4-W5p"/>
+                        <viewControllerLayoutGuide type="top" id="75h-pp-hhc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hat-qf-XWo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OmS-Ws-dOz">
+                    <view key="view" contentMode="scaleToFill" id="OFz-i3-gVg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="qrX-M8-SlA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="uAI-gh-JvR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Gl4-U4-W5p" firstAttribute="top" secondItem="qrX-M8-SlA" secondAttribute="bottom" id="N2E-lX-vXc"/>
-                            <constraint firstItem="qrX-M8-SlA" firstAttribute="top" secondItem="OmS-Ws-dOz" secondAttribute="top" id="ksf-cB-3pL"/>
-                            <constraint firstAttribute="trailing" secondItem="qrX-M8-SlA" secondAttribute="trailing" id="uDn-Nt-2qq"/>
-                            <constraint firstItem="qrX-M8-SlA" firstAttribute="leading" secondItem="OmS-Ws-dOz" secondAttribute="leading" id="vmP-AA-UbU"/>
+                            <constraint firstItem="Hat-qf-XWo" firstAttribute="top" secondItem="uAI-gh-JvR" secondAttribute="bottom" id="Ojt-aB-PNw"/>
+                            <constraint firstAttribute="trailing" secondItem="uAI-gh-JvR" secondAttribute="trailing" id="SfM-A1-s7t"/>
+                            <constraint firstItem="uAI-gh-JvR" firstAttribute="leading" secondItem="OFz-i3-gVg" secondAttribute="leading" id="ewx-pH-vZP"/>
+                            <constraint firstItem="uAI-gh-JvR" firstAttribute="top" secondItem="OFz-i3-gVg" secondAttribute="top" id="wY9-7c-Iu7"/>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="dZg-A0-LN8" kind="show" identifier="showSplashScreenSegue" id="wFK-6q-DrH"/>
+                        <segue destination="dZg-A0-LN8" kind="show" identifier="showSplashScreenSegue" id="qEQ-MP-6vC"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="irw-j2-F3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nf5-iX-whi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1324" y="63"/>
+            <point key="canvasLocation" x="-1372" y="63"/>
         </scene>
     </scenes>
     <resources>

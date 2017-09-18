@@ -7,21 +7,42 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LoadingVC: UIViewController {
     
-    let loader: DataLoader = DataLoader()
+    let loader = DataLoader()
+    let saver = DataSaver()
+    var loadingFromDB = false
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loader.loadExhibitions { (exhibitions: [Exhibition]) in
-            print("exhibitions cout \(exhibitions.count)")
-            self.showExhibitions(exhibitions)
-
+        loadFromDB()
+        loadFromBE()
+    }
+    
+    private func loadFromDB() -> Void {
+        let exhibitionsFromDB = saver.exhibitions
+        let exhibitions: [Exhibition]
+        if !exhibitionsFromDB.isEmpty {
+            loadingFromDB = true
+            exhibitions = Array(exhibitionsFromDB)
+            showExhibitions(exhibitions)
         }
     }
-
+    
+    private func loadFromBE() -> Void {
+        loader.loadExhibitions { (exhibitions: [Exhibition]) in
+            if !self.loadingFromDB {
+                self.showExhibitions(exhibitions)
+            }
+            exhibitions.forEach {
+                self.saver.add($0)
+            }
+        }
+    }
+    
     private func showExhibitions(_ exhibitions: [Exhibition]) {
         
         guard let nc = navigationController else {
