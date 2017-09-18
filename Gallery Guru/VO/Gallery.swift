@@ -7,40 +7,23 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Gallery {
+class Gallery: Object {
     
-    let id: String
-    let name: String
-    let createdDate: Date?
-    let updatedDate: Date?
-    let galleryDescription: String?
-    let email: String?
-    let facebook: String?
-    let city: String?
-    let schedule: [String]?
-    let address: String?
-    let logo: [String: String]?
-    let link: String?
-    let phone: String?
-    let latitude: String?
-    let longitude: String?
-    
-    init(id: String, name: String, createdDate: Date?, updatedDate: Date?, galleryDescription: String?, email: String?, facebook: String?, city: String?, schedule: [String]?, address: String?, logo: [String: String]?, link: String?, phone: String?, latitude: String?, longitude: String?) {
-        self.id = id
-        self.name = name
-        self.createdDate = createdDate
-        self.updatedDate = updatedDate
-        self.galleryDescription = galleryDescription
-        self.email = email
-        self.facebook = facebook
-        self.city = city
-        self.schedule = schedule
-        self.address = address
-        self.logo = logo
-        self.link = link
-        self.phone = phone
-        self.latitude = latitude
-        self.longitude = longitude
-    }
+    dynamic var  id: String = ""
+    dynamic var  name: String = ""
+    dynamic var  galleryDescription: String? = ""
+    dynamic var  email: String? = ""
+    dynamic var  facebook: String? = ""
+    dynamic var  city: String? = ""
+    dynamic var  schedule0: String? = ""
+    dynamic var  schedule1: String? = ""
+    dynamic var  address: String? = ""
+    dynamic var  logo: String? = ""
+    dynamic var  link: String? = ""
+    dynamic var  phone: String? = ""
+    dynamic var  latitude: String? = ""
+    dynamic var  longitude: String? = ""
+
 }

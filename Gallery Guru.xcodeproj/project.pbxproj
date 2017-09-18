@@ -10,6 +10,7 @@
 		302FF2E11F56F8F300B8EDA0 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302FF2E01F56F8F300B8EDA0 /* Date.swift */; };
 		304B078B1F49902700EB004F /* ExhebitionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304B07881F49902700EB004F /* ExhebitionsVC.swift */; };
 		304B07901F49903400EB004F /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304B078F1F49903400EB004F /* LoadingVC.swift */; };
+		308150A31F6F187D0018FA4D /* DataSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308150A21F6F187D0018FA4D /* DataSaver.swift */; };
 		309C1EB91F613D40008A5F63 /* exhibitions.json in Resources */ = {isa = PBXBuildFile; fileRef = 309C1EB41F613D40008A5F63 /* exhibitions.json */; };
 		309C1EBA1F613D40008A5F63 /* galleries.json in Resources */ = {isa = PBXBuildFile; fileRef = 309C1EB51F613D40008A5F63 /* galleries.json */; };
 		309C1EBB1F613D40008A5F63 /* works.json in Resources */ = {isa = PBXBuildFile; fileRef = 309C1EB61F613D40008A5F63 /* works.json */; };
@@ -38,6 +39,7 @@
 		302FF2E01F56F8F300B8EDA0 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		304B07881F49902700EB004F /* ExhebitionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhebitionsVC.swift; sourceTree = "<group>"; };
 		304B078F1F49903400EB004F /* LoadingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		308150A21F6F187D0018FA4D /* DataSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSaver.swift; sourceTree = "<group>"; };
 		309C1EB41F613D40008A5F63 /* exhibitions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exhibitions.json; sourceTree = "<group>"; };
 		309C1EB51F613D40008A5F63 /* galleries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = galleries.json; sourceTree = "<group>"; };
 		309C1EB61F613D40008A5F63 /* works.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = works.json; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		309C1EBC1F613D49008A5F63 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				309C1EC51F61731A008A5F63 /* xib */,
 				309C1EBE1F613E15008A5F63 /* Exhibitions */,
 				309C1EBD1F613E08008A5F63 /* Slides */,
 				30FCC4E01F691E2100C9C118 /* WorksCollectionViewCell.swift */,
@@ -107,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				309C1EC11F613E3D008A5F63 /* ExhibitionsCell.swift */,
-				309C1EC51F61731A008A5F63 /* xib */,
 			);
 			path = Exhibitions;
 			sourceTree = "<group>";
@@ -118,6 +120,7 @@
 				309C1EC21F613E3D008A5F63 /* ExhibitionsCell.xib */,
 			);
 			name = xib;
+			path = Exhibitions;
 			sourceTree = "<group>";
 		};
 		30D049DA1F49871300581C11 /* Storyboards */ = {
@@ -232,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E6765A1F3A2B8B00ACAB59 /*  DataLoader.swift */,
+				308150A21F6F187D0018FA4D /* DataSaver.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,10 +357,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Gallery Guru/Pods-Gallery Guru-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -375,6 +383,7 @@
 				304B078B1F49902700EB004F /* ExhebitionsVC.swift in Sources */,
 				30FCC4E51F6960E800C9C118 /* SplashScreenVC.swift in Sources */,
 				30FCC4E11F691E2100C9C118 /* WorksCollectionViewCell.swift in Sources */,
+				308150A31F6F187D0018FA4D /* DataSaver.swift in Sources */,
 				309C1EC01F613E28008A5F63 /* SlideViewCell.swift in Sources */,
 				30F9897F1F5EAE1500E16F41 /* ExhebitionsDetailVC.swift in Sources */,
 				B9E676511F3A29DB00ACAB59 /* Work.swift in Sources */,

@@ -11,12 +11,11 @@ import Foundation
 extension Date {
     
     static func from(dateString: String?) -> Date? {
-        guard let dateString = dateString else{
+        guard let dateString = dateString else {
             return nil
         }
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ss'000Z'"
-        
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ss'.000Z'"
         return dateFormatter.date(from: dateString)
     }
     

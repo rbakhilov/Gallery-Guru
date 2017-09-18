@@ -9,7 +9,7 @@
 import UIKit
 
 class ExhebitionsDetailVC: UIViewController {
-
+    
     @IBOutlet weak var galleryNameLabel: UILabel!
     @IBOutlet weak var exhibitionLabel: UILabel!
     @IBOutlet weak var exhibitionAuthorName: UILabel!
@@ -73,17 +73,19 @@ class ExhebitionsDetailVC: UIViewController {
             galleryNameLabel.text = detailExhebition.gallery?.name
             exhibitionLabel.text = detailExhebition.name
             exhibitionAuthorName.text = detailExhebition.authorName
-
             if let tempDateStart = detailExhebition.dateStart,
                 let tempDateEnd = detailExhebition.dateEnd {
                 let dateStart = dateFormat.string(from: tempDateStart)
                 let dateEnd = dateFormat.string(from: tempDateEnd)
                 startMinusDateLabel.text = dateStart + " - " + dateEnd
             }
-            
-            startDateLabel.text = detailExhebition.gallery?.schedule?[0]
-            galleyLogoLabel.image = UIImage(named: (detailExhebition.gallery?.logo?["name"])!)
-            endDateLabel.text = detailExhebition.gallery?.schedule?[1]
+            if let schedule0 = detailExhebition.gallery?.schedule0 {
+                startDateLabel.text = schedule0
+            }
+            if let schedule1 = detailExhebition.gallery?.schedule1 {
+                endDateLabel.text = schedule1
+            }
+            galleyLogoLabel.image = UIImage(named: (detailExhebition.gallery?.logo)!)
             addressTextView.text = detailExhebition.gallery?.address
             galleryPhoneTextView.text = detailExhebition.gallery?.phone
             gallerySiteTextView.text = detailExhebition.gallery?.link

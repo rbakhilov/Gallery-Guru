@@ -13,3 +13,5 @@ let exhebitionDetail = "ExhebitionDetail"
 let exhibitionsCell = "ExhibitionsCell"
 let worksCollectionViewCell = "WorksCollectionViewCell"
 let showSplashScreenSegue = "showSplashScreenSegue"
+let exhibitionUpdateNotificationName = Notification.Name("OnExhibitionModelUpdated")
+
