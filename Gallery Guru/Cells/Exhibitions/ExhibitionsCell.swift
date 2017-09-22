@@ -16,6 +16,10 @@ class ExhibitionsCell: UITableViewCell {
     @IBOutlet weak var authorName: UILabel!
     @IBOutlet weak var blackContainerView: UIView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         blackContainerView.backgroundColor = UIColor.black.withAlphaComponent(0.75)
     }
