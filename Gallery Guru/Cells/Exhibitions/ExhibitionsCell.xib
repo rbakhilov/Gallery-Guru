@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                     </imageView>
-                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0q-S6-V94">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0q-S6-V94">
                         <rect key="frame" x="0.0" y="195" width="320" height="124.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6gT-R5-05V">
@@ -61,7 +61,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6gT-R5-05V" secondAttribute="trailing" constant="8" id="Hby-iw-7NB"/>
                             <constraint firstItem="6gT-R5-05V" firstAttribute="leading" secondItem="n0q-S6-V94" secondAttribute="leading" constant="8" id="Luv-Ph-zza"/>
@@ -79,6 +79,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="authorName" destination="Jl9-fk-IyC" id="VMM-8B-dlt"/>
+                <outlet property="blackContainerView" destination="n0q-S6-V94" id="UJX-ui-rCg"/>
                 <outlet property="exhibitionImage" destination="L6d-El-HNZ" id="yvi-sO-q8c"/>
                 <outlet property="exhibitionName" destination="gWR-9u-svO" id="fBf-Dj-EvA"/>
                 <outlet property="galleryName" destination="Jpa-hA-C5G" id="zvk-Es-wd9"/>

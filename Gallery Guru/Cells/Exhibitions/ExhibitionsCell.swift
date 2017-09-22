@@ -14,9 +14,10 @@ class ExhibitionsCell: UITableViewCell {
     @IBOutlet weak var galleryName: UILabel!
     @IBOutlet weak var exhibitionName: UILabel!
     @IBOutlet weak var authorName: UILabel!
+    @IBOutlet weak var blackContainerView: UIView!
     
-    //    override func setSelected(_ selected: Bool, animated: Bool) {
-    //        super.setSelected(selected, animated: animated)
-    //    }
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        blackContainerView.backgroundColor = UIColor.black.withAlphaComponent(0.75)
+    }
 
 }
