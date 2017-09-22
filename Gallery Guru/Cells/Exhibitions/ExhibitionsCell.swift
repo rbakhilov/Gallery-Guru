@@ -15,4 +15,8 @@ class ExhibitionsCell: UITableViewCell {
     @IBOutlet weak var exhibitionName: UILabel!
     @IBOutlet weak var authorName: UILabel!
     
+    //    override func setSelected(_ selected: Bool, animated: Bool) {
+    //        super.setSelected(selected, animated: animated)
+    //    }
+
 }

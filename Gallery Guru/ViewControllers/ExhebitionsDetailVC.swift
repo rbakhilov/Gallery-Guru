@@ -41,6 +41,11 @@ class ExhebitionsDetailVC: UIViewController {
         navigationController?.navigationBar.backItem?.title = ""
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     @IBAction func visibilitySwitchExhebitionContact(_ sender: Any) {
         
         var rotationAngel: CGFloat = 0
